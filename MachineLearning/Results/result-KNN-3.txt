@@ -1,0 +1,63 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 3 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     preparedDataSet-weka.filters.unsupervised.attribute.NumericToNominal-R49-49-weka.filters.unsupervised.attribute.StringToNominal-R2-2-weka.filters.unsupervised.attribute.StringToNominal-R4-4-weka.filters.unsupervised.attribute.Remove-R1-3,7-9,13,16,18,21-23,26,29-36,38-41,43-45,48-weka.filters.unsupervised.attribute.Standardize
+Instances:    2540047
+Attributes:   20
+              dsport
+              proto
+              state
+              sttl
+              dttl
+              sloss
+              service
+              Sload
+              Spkts
+              swin
+              dwin
+              dmeansz
+              trans_depth
+              Sjit
+              Djit
+              ct_state_ttl
+              ct_srv_dst
+              ct_dst_sport_ltm
+              ct_dst_src_ltm
+              Label
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 3 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.53 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 608720.48 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      857336               99.2728 %
+Incorrectly Classified Instances      6280                0.7272 %
+Kappa statistic                          0.967 
+Mean absolute error                      0.0082
+Root mean squared error                  0.0727
+Relative absolute error                  3.7084 %
+Root relative squared error             21.8589 %
+Total Number of Instances           863616     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.996    0.032    0.995      0.996    0.996      0.967    0.996     0.999     0
+                 0.968    0.004    0.974      0.968    0.971      0.967    0.996     0.989     1
+Weighted Avg.    0.993    0.028    0.993      0.993    0.993      0.967    0.996     0.998     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 751525   2803 |      a = 0
+   3477 105811 |      b = 1

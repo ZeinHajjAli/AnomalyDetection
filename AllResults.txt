@@ -1,0 +1,717 @@
+############################################################
+# Multi-Layered Feed Forward Neural Network - Partial Data #
+############################################################
+
+[0.16438362002372742, 0.9221753478050232]
+              precision    recall  f1-score   support
+
+           0       0.91      0.87      0.89     27900
+           1       0.93      0.95      0.94     49402
+
+    accuracy                           0.92     77302
+   macro avg       0.92      0.91      0.91     77302
+weighted avg       0.92      0.92      0.92     77302
+
+[[24271  3629]
+ [ 2387 47015]]
+
+Training time:  75.95189182501053
+Evaluation time:  1.8092629349557683
+Prediction time:  1.1350453729974106
+Test set shape:  (77302, 42)
+
+#########################################################
+# Multi-Layered Feed Forward Neural Network - Full Data #
+#########################################################
+
+[0.04428930580615997, 0.9906209111213684]
+              precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99    665629
+           1       0.97      0.95      0.96     96385
+
+    accuracy                           0.99    762014
+   macro avg       0.98      0.97      0.98    762014
+weighted avg       0.99      0.99      0.99    762014
+
+[[663179   2450]
+ [  4697  91688]]
+
+Training time:  699.4897618849645
+Evaluation time:  16.943989432998933
+Prediction time:  11.0986284899991
+Test set shape:  (762014, 33)
+
+###################################
+# Deep AutoEncoder - Partial Data #
+###################################
+
+[0.14527764916419983, 0.9252232909202576]
+              precision    recall  f1-score   support
+
+           0       0.91      0.90      0.90     14017
+           1       0.94      0.94      0.94     22933
+
+    accuracy                           0.93     36950
+   macro avg       0.92      0.92      0.92     36950
+weighted avg       0.93      0.93      0.93     36950
+
+[[12566  1451]
+ [ 1312 21621]]
+
+AE Training time:  100.89799333899282
+FF Training time:  299.74303982098354
+Combined Training time:  400.64103315997636
+Evaluation time:  1.1435496659833007
+Prediction time:  0.6300420350162312
+Test set shape:  (36950, 42)
+
+################################
+# Deep AutoEncoder - Full Data #
+################################
+
+[0.02000698447227478, 0.9946062564849854]
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      0.99     48690
+           1       0.99      1.00      1.00     80348
+
+    accuracy                           0.99    129038
+   macro avg       1.00      0.99      0.99    129038
+weighted avg       0.99      0.99      0.99    129038
+
+[[48006   684]
+ [   12 80336]]
+
+AE Training time:  351.4827863779501
+FF Training time:  1089.271463925019
+Combined Training time:  1440.754250302969
+Evaluation time:  2.685133953986224
+Prediction time:  1.5305822489899583
+Test set shape:  (129038, 41)
+
+#######################
+# Decision Tree - J48 #
+#######################
+
+Number of Leaves  :   194923
+
+Size of the tree :  195936
+
+
+Time taken to build model: 560.06 seconds
+
+Time taken to test model on training data: 24.83 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances     2525452               99.4254 %
+Incorrectly Classified Instances     14595                0.5746 %
+Kappa statistic                          0.974 
+Mean absolute error                      0.0087
+Root mean squared error                  0.0656
+Relative absolute error                  3.955  %
+Root relative squared error             19.7491 %
+Total Number of Instances          2540047     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.997    0.023    0.997      0.997    0.997      0.974    1.000     1.000     0
+                 0.977    0.003    0.977      0.977    0.977      0.974    1.000     0.997     1
+Weighted Avg.    0.994    0.020    0.994      0.994    0.994      0.974    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+ 2211488    7276 |       a = 0
+    7319  313964 |       b = 1
+
+Time taken to test model on test split: 5.38 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances      857750               99.3208 %
+Incorrectly Classified Instances      5866                0.6792 %
+Kappa statistic                          0.9693
+Mean absolute error                      0.0097
+Root mean squared error                  0.0711
+Relative absolute error                  4.3888 %
+Root relative squared error             21.3898 %
+Total Number of Instances           863616     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.996    0.026    0.996      0.996    0.996      0.969    0.999     1.000     0
+                 0.974    0.004    0.972      0.974    0.973      0.969    0.999     0.995     1
+Weighted Avg.    0.993    0.023    0.993      0.993    0.993      0.969    0.999     0.999     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 751297   3031 |      a = 0
+   2835 106453 |      b = 1
+
+###########################
+# Decision Tree - REPTree #
+###########################
+
+Size of the tree : 135362
+
+Time taken to build model: 3616.27 seconds
+
+Time taken to test model on training data: 23.44 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances     2527446               99.5039 %
+Incorrectly Classified Instances     12601                0.4961 %
+Kappa statistic                          0.9774
+Mean absolute error                      0.0072
+Root mean squared error                  0.0593
+Relative absolute error                  3.2706 %
+Root relative squared error             17.8383 %
+Total Number of Instances          2540047     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.998    0.025    0.996      0.998    0.997      0.977    1.000     1.000     0
+                 0.975    0.002    0.986      0.975    0.980      0.977    1.000     0.999     1
+Weighted Avg.    0.995    0.022    0.995      0.995    0.995      0.977    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+ 2214191    4573 |       a = 0
+    8028  313255 |       b = 1
+
+Time taken to test model on test split: 9.43 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances      857428               99.2835 %
+Incorrectly Classified Instances      6188                0.7165 %
+Kappa statistic                          0.9675
+Mean absolute error                      0.0091
+Root mean squared error                  0.0713
+Relative absolute error                  4.1271 %
+Root relative squared error             21.4319 %
+Total Number of Instances           863616     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.996    0.031    0.995      0.996    0.996      0.968    0.999     1.000     0
+                 0.969    0.004    0.975      0.969    0.972      0.968    0.999     0.996     1
+Weighted Avg.    0.993    0.028    0.993      0.993    0.993      0.968    0.999     0.999     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 751580   2748 |      a = 0
+   3440 105848 |      b = 1
+
+##############################
+# Decision Tree - RandomTree #
+##############################
+
+Size of the tree : 3513057
+Max depth of tree: 25
+
+Time taken to build model: 593.36 seconds
+
+Time taken to test model on training data: 10.23 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances     2532739               99.7123 %
+Incorrectly Classified Instances      7308                0.2877 %
+Kappa statistic                          0.9869
+Mean absolute error                      0.004 
+Root mean squared error                  0.0437
+Relative absolute error                  1.7906 %
+Root relative squared error             13.149  %
+Total Number of Instances          2540047     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.999    0.015    0.998      0.999    0.998      0.987    1.000     1.000     0
+                 0.985    0.001    0.992      0.985    0.989      0.987    1.000     1.000     1
+Weighted Avg.    0.997    0.013    0.997      0.997    0.997      0.987    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+       a       b   <-- classified as
+ 2216291    2473 |       a = 0
+    4835  316448 |       b = 1
+
+Time taken to test model on test split: 3.03 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances      856927               99.2255 %
+Incorrectly Classified Instances      6689                0.7745 %
+Kappa statistic                          0.9649
+Mean absolute error                      0.0085
+Root mean squared error                  0.0801
+Relative absolute error                  3.8675 %
+Root relative squared error             24.0962 %
+Total Number of Instances           863616     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.996    0.032    0.995      0.996    0.996      0.965    0.992     0.998     0
+                 0.968    0.004    0.970      0.968    0.969      0.965    0.992     0.974     1
+Weighted Avg.    0.992    0.028    0.992      0.992    0.992      0.965    0.992     0.995     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 751087   3241 |      a = 0
+   3448 105840 |      b = 1
+
+##################
+# KNN Clustering #
+##################
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 3 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     preparedDataSet-weka.filters.unsupervised.attribute.NumericToNominal-R49-49-weka.filters.unsupervised.attribute.StringToNominal-R2-2-weka.filters.unsupervised.attribute.StringToNominal-R4-4-weka.filters.unsupervised.attribute.Remove-R1-3,7-9,13,16,18,21-23,26,29-36,38-41,43-45,48-weka.filters.unsupervised.attribute.Standardize
+Instances:    2540047
+Attributes:   20
+              dsport
+              proto
+              state
+              sttl
+              dttl
+              sloss
+              service
+              Sload
+              Spkts
+              swin
+              dwin
+              dmeansz
+              trans_depth
+              Sjit
+              Djit
+              ct_state_ttl
+              ct_srv_dst
+              ct_dst_sport_ltm
+              ct_dst_src_ltm
+              Label
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 3 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.53 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 608720.48 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      857336               99.2728 %
+Incorrectly Classified Instances      6280                0.7272 %
+Kappa statistic                          0.967 
+Mean absolute error                      0.0082
+Root mean squared error                  0.0727
+Relative absolute error                  3.7084 %
+Root relative squared error             21.8589 %
+Total Number of Instances           863616     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.996    0.032    0.995      0.996    0.996      0.967    0.996     0.999     0
+                 0.968    0.004    0.974      0.968    0.971      0.967    0.996     0.989     1
+Weighted Avg.    0.993    0.028    0.993      0.993    0.993      0.967    0.996     0.998     
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 751525   2803 |      a = 0
+   3477 105811 |      b = 1
+
+COMPUTECANADA TESTING
+
+Time taken to test model on test data: 902.88 seconds
+
+=== Error on test data ===
+
+Correctly Classified Instances        5029              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0002
+Root mean squared error                  0.0081
+Total Number of Instances             5029     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     0
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4825    0 |    a = 0
+    0  204 |    b = 1
+
+############################
+# Multiclass Deep Learning #
+############################
+
+[0.10110396891832352, 0.9707748293876648]
+
+/usr/local/lib/python3.6/dist-packages/sklearn/metrics/_classification.py:1272: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+              precision    recall  f1-score   support
+
+           0       0.02      0.82      0.05       803
+           1       0.00      0.00      0.00       699
+           2       0.00      0.00      0.00      4906
+           3       0.70      0.32      0.44     13357
+           4       0.00      0.00      0.00      7274
+           5       1.00      0.97      0.99     64644
+           6       0.99      0.99      0.99    665629
+           7       0.00      0.00      0.00      4196
+           8       0.00      0.00      0.00       453
+           9       0.00      0.00      0.00        53
+
+    accuracy                           0.96    762014
+   macro avg       0.27      0.31      0.25    762014
+weighted avg       0.97      0.96      0.96    762014
+
+[[   657      0      0     82      0      0     64      0      0      0]
+ [   620      0      0     68      0      3      8      0      0      0]
+ [  4086      0      0    742      0      5     73      0      0      0]
+ [  8726      0      0   4333      0      7    291      0      0      0]
+ [  4029      0      0    127      0      6   3112      0      0      0]
+ [  1207      0      0    411      0  62898    128      0      0      0]
+ [  3759      0      0    247      0      2 661621      0      0      0]
+ [  3962      0      0    150      0      6     78      0      0      0]
+ [   407      0      0      0      0      0     46      0      0      0]
+ [    44      0      0      8      0      0      1      0      0      0]]
+Training time:  567.356115084
+Evaluation time:  20.20854228600001
+Prediction time:  12.353997421999793
+number or predicitons:  762014
+
+#################################
+# Multiclass Decision Tree: J48 #
+#################################
+
+Number of Leaves  : 	392875
+
+Size of the tree : 	395351
+
+
+Time taken to build model: 544.71 seconds
+
+Time taken to test model on training data: 65.81 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances     2498091               98.3483 %
+Incorrectly Classified Instances     41955                1.6517 %
+Kappa statistic                          0.9275
+Mean absolute error                      0.0045
+Root mean squared error                  0.0466
+Relative absolute error                  9.7142 %
+Root relative squared error             30.7449 %
+Total Number of Instances          2540046     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.998    0.027    0.996      0.998    0.997      0.977    1.000     1.000     Normal
+                 0.970    0.011    0.607      0.970    0.747      0.763    0.997     0.833     Exploits
+                 0.700    0.000    0.963      0.700    0.810      0.820    0.998     0.857     Reconnaissance
+                 0.129    0.000    0.857      0.129    0.225      0.332    0.994     0.439     DoS
+                 0.988    0.000    0.998      0.988    0.993      0.992    1.000     0.999     Generic
+                 0.919    0.000    1.000      0.919    0.958      0.958    1.000     0.989     Shellcode
+                 0.562    0.002    0.770      0.562    0.650      0.655    0.996     0.736     Fuzzers
+                 0.241    0.000    0.894      0.241    0.380      0.464    0.999     0.323     Worms
+                 0.122    0.000    0.959      0.122    0.216      0.341    0.994     0.193     Backdoor
+                 0.114    0.000    0.859      0.114    0.201      0.313    0.994     0.205     Analysis
+Weighted Avg.    0.983    0.024    0.986      0.983    0.981      0.965    1.000     0.988     
+
+
+=== Confusion Matrix ===
+
+       a       b       c       d       e       f       g       h       i       j   <-- classified as
+ 2214562     349      76      19      16       0    3720       0       7      14 |       a = Normal
+     595   43175     114     261     252       0     116       3       3       6 |       b = Exploits
+      61    4063    9787       5      21       0      50       0       0       0 |       c = Reconnaissance
+      83   13905      44    2115     143       0      62       0       0       1 |       d = DoS
+      46    2433      17      53  212802       0      97       2       2      29 |       e = Generic
+      40      41      33       2       0    1388       7       0       0       0 |       f = Shellcode
+    7614    2905      82       3      10       0   13632       0       0       0 |       g = Fuzzers
+       2     117       4       0       8       0       1      42       0       0 |       h = Worms
+       8    2018       6       3       3       0       8       0     283       0 |       i = Backdoor
+     279    2081       1       8       0       0       3       0       0     305 |       j = Analysis
+
+Time taken to test model on test split: 20.64 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances      846756               98.0477 %
+Incorrectly Classified Instances     16860                1.9523 %
+Kappa statistic                          0.914 
+Mean absolute error                      0.005 
+Root mean squared error                  0.0509
+Relative absolute error                 11.0021 %
+Root relative squared error             33.6075 %
+Total Number of Instances           863616     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.998    0.041    0.994      0.998    0.996      0.967    0.999     1.000     Normal
+                 0.920    0.012    0.587      0.920    0.717      0.730    0.991     0.772     Exploits
+                 0.707    0.000    0.933      0.707    0.804      0.811    0.993     0.846     Reconnaissance
+                 0.097    0.000    0.638      0.097    0.168      0.247    0.987     0.381     DoS
+                 0.986    0.000    0.996      0.986    0.991      0.990    0.999     0.997     Generic
+                 0.020    0.000    0.455      0.020    0.038      0.094    0.997     0.158     Shellcode
+                 0.494    0.002    0.708      0.494    0.582      0.588    0.990     0.657     Fuzzers
+                 0.177    0.000    0.647      0.177    0.278      0.339    0.900     0.167     Worms
+                 0.101    0.000    0.898      0.101    0.182      0.301    0.990     0.166     Backdoor
+                 0.049    0.000    0.564      0.049    0.090      0.166    0.981     0.117     Analysis
+Weighted Avg.    0.980    0.036    0.981      0.980    0.978      0.954    0.999     0.985     
+
+
+=== Confusion Matrix ===
+
+      a      b      c      d      e      f      g      h      i      j   <-- classified as
+ 752349    212     17     45     12      9   1486      0      4     21 |      a = Normal
+    584  13970    168    195    184      3     66      3      3      6 |      b = Exploits
+     30   1292   3364     10      8      0     53      1      0      0 |      c = Reconnaissance
+     50   4937     17    547     86      0     27      0      2      0 |      d = DoS
+      7    931      7     45  72296      0     43      2      0      7 |      e = Generic
+    467     13     12      0      0     10      7      0      0      0 |      f = Shellcode
+   3150    992     16      7     13      0   4086      0      0      0 |      g = Fuzzers
+      3     42      3      1      2      0      0     11      0      0 |      h = Worms
+     12    682      2      3      2      0      2      0     79      0 |      i = Backdoor
+    134    716      0      4      0      0      2      0      0     44 |      j = Analysis
+
+#####################################
+# Multiclass Decision Tree: REPTree #
+#####################################
+
+Size of the tree : 136915
+
+Time taken to build model: 4850.94 seconds
+
+Time taken to test model on training data: 37.95 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances     2498038               98.3462 %
+Incorrectly Classified Instances     42008                1.6538 %
+Kappa statistic                          0.9275
+Mean absolute error                      0.0044
+Root mean squared error                  0.0464
+Relative absolute error                  9.5417 %
+Root relative squared error             30.6604 %
+Total Number of Instances          2540046     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.998    0.026    0.996      0.998    0.997      0.977    1.000     1.000     Normal
+                 0.930    0.010    0.623      0.930    0.746      0.756    0.997     0.855     Exploits
+                 0.768    0.000    0.926      0.768    0.839      0.842    0.999     0.888     Reconnaissance
+                 0.178    0.001    0.559      0.178    0.270      0.313    0.994     0.459     DoS
+                 0.988    0.000    0.997      0.988    0.992      0.992    1.000     0.999     Generic
+                 0.917    0.000    1.000      0.917    0.956      0.957    1.000     0.991     Shellcode
+                 0.589    0.002    0.750      0.589    0.660      0.662    0.996     0.756     Fuzzers
+                 0.190    0.000    0.868      0.190    0.311      0.406    1.000     0.362     Worms
+                 0.109    0.000    0.962      0.109    0.197      0.324    0.994     0.207     Backdoor
+                 0.071    0.000    0.759      0.071    0.129      0.231    0.994     0.183     Analysis
+Weighted Avg.    0.983    0.023    0.984      0.983    0.982      0.965    1.000     0.989     
+
+
+=== Confusion Matrix ===
+
+       a       b       c       d       e       f       g       h       i       j   <-- classified as
+ 2214021     377      49      26      27       0    4230       0       7      26 |       a = Normal
+     612   41386     594    1361     359       0     205       1       1       6 |       b = Exploits
+      25    2831   10739     244      15       0     130       3       0       0 |       c = Reconnaissance
+     136   12927     103    2911     190       0      82       0       1       3 |       d = DoS
+      36    2284      30     183  212829       0      94       1       1      23 |       e = Generic
+      34      42      31       1      12    1385       6       0       0       0 |       f = Shellcode
+    7028    2681      44     174      27       0   14290       0       0       2 |       g = Fuzzers
+       1     124       4       0      10       0       2      33       0       0 |       h = Worms
+       5    1885       8     158       2       0      16       0     255       0 |       i = Backdoor
+     387    1943       0     147       6       0       5       0       0     189 |       j = Analysis
+
+Time taken to test model on test split: 10.19 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances      845879               97.9462 %
+Incorrectly Classified Instances     17737                2.0538 %
+Kappa statistic                          0.9102
+Mean absolute error                      0.005 
+Root mean squared error                  0.0516
+Relative absolute error                 10.9582 %
+Root relative squared error             34.0532 %
+Total Number of Instances           863616     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.997    0.032    0.995      0.997    0.996      0.968    0.999     1.000     Normal
+                 0.884    0.011    0.592      0.884    0.709      0.718    0.994     0.808     Exploits
+                 0.741    0.000    0.922      0.741    0.821      0.825    0.993     0.871     Reconnaissance
+                 0.120    0.001    0.430      0.120    0.188      0.225    0.988     0.380     DoS
+                 0.986    0.002    0.976      0.986    0.981      0.979    0.999     0.998     Generic
+                 0.020    0.000    0.455      0.020    0.038      0.094    0.993     0.137     Shellcode
+                 0.519    0.002    0.684      0.519    0.590      0.593    0.991     0.656     Fuzzers
+                 0.113    0.000    0.636      0.113    0.192      0.268    0.942     0.161     Worms
+                 0.088    0.000    0.784      0.088    0.159      0.263    0.967     0.161     Backdoor
+                 0.037    0.000    0.516      0.037    0.068      0.137    0.974     0.112     Analysis
+Weighted Avg.    0.979    0.028    0.979      0.979    0.977      0.953    0.999     0.986     
+
+
+=== Confusion Matrix ===
+
+      a      b      c      d      e      f      g      h      i      j   <-- classified as
+ 751561    158     13     20    630      9   1739      0      4     21 |      a = Normal
+    326  13419    206    606    506      3    105      1      6      4 |      b = Exploits
+     14   1113   3524     54      8      0     44      0      0      1 |      c = Reconnaissance
+     57   4753     39    682     93      0     38      0      4      0 |      d = DoS
+     18    914     18     63  72281      0     34      3      2      5 |      e = Generic
+     10     13     10      0    462     10      4      0      0      0 |      f = Shellcode
+   2921    935     13     73     26      0   4293      0      3      0 |      g = Fuzzers
+      1     45      1      0      8      0      0      7      0      0 |      h = Worms
+      1    643      0     46      9      0     14      0     69      0 |      i = Backdoor
+    149    666      0     42      1      0      9      0      0     33 |      j = Analysis
+
+########################################
+# Multiclass Decision Tree: RandomTree #
+########################################
+
+Size of the tree : 2354821
+Max depth of tree: 100
+
+Time taken to build model: 733.61 seconds
+
+Time taken to test model on training data: 14.32 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances     2514558               98.9966 %
+Incorrectly Classified Instances     25488                1.0034 %
+Kappa statistic                          0.9562
+Mean absolute error                      0.0025
+Root mean squared error                  0.035 
+Relative absolute error                  5.4714 %
+Root relative squared error             23.1022 %
+Total Number of Instances          2540046     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.004    0.999      1.000    1.000      0.996    1.000     1.000     Normal
+                 0.942    0.008    0.691      0.942    0.797      0.803    0.999     0.925     Exploits
+                 0.842    0.000    0.992      0.842    0.911      0.914    0.999     0.923     Reconnaissance
+                 0.401    0.002    0.598      0.401    0.480      0.487    0.997     0.618     DoS
+                 0.991    0.000    1.000      0.991    0.995      0.995    1.000     0.999     Generic
+                 0.985    0.000    0.999      0.985    0.992      0.992    1.000     1.000     Shellcode
+                 0.830    0.000    0.963      0.830    0.892      0.893    0.999     0.951     Fuzzers
+                 0.874    0.000    0.987      0.874    0.927      0.929    1.000     0.985     Worms
+                 0.146    0.000    1.000      0.146    0.254      0.381    0.996     0.260     Backdoor
+                 0.216    0.000    0.995      0.216    0.355      0.464    0.996     0.342     Analysis
+Weighted Avg.    0.990    0.004    0.991      0.990    0.989      0.987    1.000     0.994     
+
+
+=== Confusion Matrix ===
+
+       a       b       c       d       e       f       g       h       i       j   <-- classified as
+ 2218051       5      11       1       2       0     692       0       0       1 |       a = Normal
+      31   41948      13    2491      13       1      27       1       0       0 |       b = Exploits
+       7    1814   11777     380       2       0       7       0       0       0 |       c = Reconnaissance
+       5    9728      24    6563      11       1      18       1       0       2 |       d = DoS
+       5    1539      10     398  213524       0       5       0       0       0 |       e = Generic
+       2       2       8       1       7    1489       2       0       0       0 |       f = Shellcode
+    1325    2359      21     392      13       0   20136       0       0       0 |       g = Fuzzers
+       0      16       0       2       4       0       0     152       0       0 |       h = Worms
+       5    1588       3     379       5       0      10       0     339       0 |       i = Backdoor
+       2    1684       1     371      33       0       7       0       0     579 |       j = Analysis
+
+Time taken to test model on test split: 2.72 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances      844081               97.738  %
+Incorrectly Classified Instances     19535                2.262  %
+Kappa statistic                          0.9018
+Mean absolute error                      0.0049
+Root mean squared error                  0.0583
+Relative absolute error                 10.6394 %
+Root relative squared error             38.4953 %
+Total Number of Instances           863616     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.995    0.030    0.996      0.995    0.995      0.963    0.987     0.996     Normal
+                 0.800    0.011    0.566      0.800    0.663      0.666    0.953     0.691     Exploits
+                 0.747    0.001    0.851      0.747    0.795      0.796    0.913     0.689     Reconnaissance
+                 0.212    0.003    0.323      0.212    0.256      0.258    0.935     0.296     DoS
+                 0.985    0.001    0.995      0.985    0.990      0.989    0.995     0.987     Generic
+                 0.026    0.000    0.351      0.026    0.048      0.095    0.997     0.150     Shellcode
+                 0.545    0.004    0.586      0.545    0.565      0.562    0.836     0.413     Fuzzers
+                 0.274    0.000    0.309      0.274    0.291      0.291    0.684     0.098     Worms
+                 0.070    0.000    0.567      0.070    0.125      0.199    0.716     0.069     Backdoor
+                 0.088    0.000    0.397      0.088    0.144      0.186    0.719     0.061     Analysis
+Weighted Avg.    0.977    0.026    0.977      0.977    0.977      0.948    0.985     0.976     
+
+
+=== Confusion Matrix ===
+
+      a      b      c      d      e      f      g      h      i      j   <-- classified as
+ 750298   1038     51     51     22     11   2592      0      2     90 |      a = Normal
+    324  12148    419   1698    247      5    276     26     21     18 |      b = Exploits
+     47    911   3552    170     12      3     54      4      3      2 |      c = Reconnaissance
+     62   4172     59   1203     71      1     82      3      8      5 |      d = DoS
+     47    791     25    206  72208      2     51      4      0      4 |      e = Generic
+     13    465     13      0      3     13      2      0      0      0 |      f = Shellcode
+   2676    832     51    159     26      2   4508      1      8      1 |      g = Fuzzers
+      0     38      2      1      4      0      0     17      0      0 |      h = Worms
+     14    531      2    114      5      0     61      0     55      0 |      i = Backdoor
+     92    534      0    127      7      0     61      0      0     79 |      j = Analysis
+
